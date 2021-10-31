@@ -12,7 +12,7 @@ logger = Logger.get_logger()
 bot = Bot(token=settings.API_TOKEN)
 dp = Dispatcher(bot)
 
-keyboard = types.ReplyKeyboardMarkup()
+keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 get_dino_button = types.KeyboardButton(text="Хочу динозавра! 🦕")
 keyboard.add(get_dino_button)
 
