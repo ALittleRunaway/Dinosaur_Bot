@@ -1,3 +1,4 @@
+import os
 from aiogram import Bot
 from aiogram import Dispatcher
 from aiogram import executor
@@ -9,7 +10,7 @@ from .settings import settings
 
 logger = Logger.get_logger()
 
-bot = Bot(token=settings.API_TOKEN)
+bot = Bot(token=os.getenv("API_TOKEN"))
 dp = Dispatcher(bot)
 
 keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
