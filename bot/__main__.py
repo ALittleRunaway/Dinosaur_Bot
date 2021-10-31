@@ -30,7 +30,7 @@ async def send_welcome(message: types.Message):
 @dp.message_handler(regexp='Хочу динозавра! 🦕')
 async def dinos(message: types.Message):
     """Get the dino!"""
-    logger.info(f" {message.from_user.first_name} {message.from_user.last_name} {message.from_user.username}")
+    logger.info(f"{message.from_user.first_name} {message.from_user.last_name} {message.from_user.username}")
     dinosaur = Dinosaur()
     dinosaur.get_info()
     await message.answer_photo(dinosaur.img, caption=dinosaur.create_media_message())
@@ -38,5 +38,5 @@ async def dinos(message: types.Message):
 
 
 if __name__ == '__main__':
-    logger.info(" The bot has started!")
+    logger.info("The bot has started!")
     executor.start_polling(dp, skip_updates=True)
