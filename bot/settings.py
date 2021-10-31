@@ -8,7 +8,6 @@ class Settings():
 
     link = "http://dinopedia.ru"
     info_add_link = "/dinosaur.php"
-    API_TOKEN = '2087623412:AAF22z5PCaYTlTOVIeP9hvfxMrcFpHFMkEA'
     log_level = "INFO"
     project_path = os.path.dirname(bot.__file__)
 
